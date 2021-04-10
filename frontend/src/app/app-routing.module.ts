@@ -5,6 +5,7 @@ import { AdminIndexComponent } from './admin/admin-index/admin-index.component';
 import { EmployeeIndexComponent } from './employee/employee-index/employee-index.component';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { ManagerIndexComponent } from './manager/manager-index/manager-index.component';
 
 const routes: Routes = [
@@ -13,6 +14,11 @@ const routes: Routes = [
    */
   { path: "", component: HomeComponent },
   { path: "ng", component: HomeComponent },
+  
+  /**
+   * Login paths
+   */
+  { path: "ng/login", component: LoginComponent },
   
   /**
    * Employee paths

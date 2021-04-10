@@ -28,7 +28,7 @@ export class EmployeeIndexComponent implements OnInit {
     this.employeeService.findByEmployeeId(employeeId).subscribe(
       (employeeProjectDatas:EmployeeProjectData[]) => {
         this.employeeProjectDatas = employeeProjectDatas;
-        console.log(JSON.stringify(this.employeeProjectDatas));
+        console.log(JSON.stringify(this.employeeProjectDatas, null, 2));
       },
       (error: HttpErrorResponse) => {
         console.log(error.message);
