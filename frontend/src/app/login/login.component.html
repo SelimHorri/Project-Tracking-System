@@ -19,14 +19,14 @@
                 <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Andrew Jones"
                   class="img-fluid rounded-circle" width="132" height="132">
               </div>
-              <form>
+              <form >
                 <div class="form-group">
                   <label>Username</label>
-                  <input class="form-control form-control-lg" type="text"  name="username" placeholder="Enter your Username">
+                  <input class="form-control form-control-lg" type="text" name="username" ngModel placeholder="Enter your Username">
                 </div>
                 <div class="form-group">
                   <label>Password</label>
-                  <input class="form-control form-control-lg" type="password" name="password"
+                  <input class="form-control form-control-lg" type="password" name="password" ngModel
                     placeholder="Enter your Password">
                   <!--<small>
                     <a href="pages-reset-password.html">Forgot password?</a>
@@ -40,7 +40,7 @@
                   </div>
                 </div>-->
                 <div class="text-center mt-3">
-                  <a href="index.html" class="btn btn-lg btn-primary">Sign in</a>
+                  <input (click)="authenticate()" type="button" value="Login" class="btn btn-lg btn-primary" />
                   <!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
                 </div>
               </form>

@@ -1,4 +1,6 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../service/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   
-  constructor() {
+  public username: string = "";
+  public password: string = "";
+  
+  constructor(private loginService: LoginService) {
     
   }
   
   ngOnInit(): void {
     
+  }
+  
+  public authenticate(): void {
+    console.log(this.username + " $$ " + this.password);
+    alert(this.username + " $$ " + this.password);
   }
   
   
